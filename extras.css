@@ -174,3 +174,14 @@ input:-internal-autofill-selected { background-color: var(--white);}
 }
 
 .extra-space:hover .helper-text { visibility: visible; }
+
+.video-wrapper {
+  width: 750px;
+  height: 420px;
+}
+.close-video-icon {
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+  padding: 0.5rem;
+}

@@ -32,15 +32,11 @@
 
 .section-content, .subsection-content {
   height: auto;
-  overflow: visible;
+  display: block;
   padding: 1rem;
 
 }
-.pcp-section.close .section-content, .close .subsection-content {
-  height: 0;
-  overflow: hidden;
-  padding: 0;
-}
+.pcp-section.close .section-content, .close .subsection-content { display: none; }
 .subsection-content {
   background-color: var(--purpleWithLessOpacity);
   border: 2px solid var(--purple);
@@ -87,6 +83,11 @@
   border: 2px solid var(--purple);
   color: var(--purple);
 }
+.btn.special-purple {
+  border: none;
+  background-color: var(--white);
+  color: var(--purple);
+}
 
 .btn.grey {
   border: 2px solid var(--darkGrey);
@@ -117,20 +118,13 @@
   border-radius: 5px;
   width: calc( 50% - 0.5rem);
 }
-.shared {
+.private, .shared  {
   background-color: var(--purpleWithOpacity);
-  text-align: end;
-  padding: 0.3rem;
-  border-radius: 3px;
-  margin-bottom: 0.8rem;
-}
-.shared h4 {
-  color: var(--purple);
-}
-.private {
-  background-color: var(--purpleWithOpacity);
-  padding: 0.3rem;
+  padding: 0.3rem 0.5rem;
   border-radius: 3px;
   color: var(--purple);
-  margin-right: 0.5rem;
+  font-weight: 600;
+  font-style: italic;
 }
+.private { margin-right: 0.5rem;}
+.shared { text-align: end; }

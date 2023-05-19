@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;0,900;1,500;1,600;1,800;1,900&family=PT+Sans:ital@1&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-  <title>Universal Pre-Call Plan</title>
+  <title>Swagger Pre-Call Plan</title>
 </head>
 <body>
   <main>
@@ -25,7 +25,10 @@
           <div class="first-assist-wrapper d-flex justify-end">
             <button class="btn grey overlay-trigger" type="button" value="overlay-one"><object class="mr-05" data="./icons/grey-video-icon.svg" width="14" height="8"></object>ASSIST</button>
             <div class="overlay" id="overlay-one">
-              <iframe src="https://player.vimeo.com/video/820953292?h=f0457235b3" width="750" height="420" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+              <div class="video-wrapper relative">
+                <iframe src="https://player.vimeo.com/video/820953292?h=f0457235b3" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                <div class="close-video-icon"><img src="./icons/close-icon.svg" alt=""></div>
+              </div>
             </div>
           </div>
         </div>
@@ -42,7 +45,10 @@
                 <h3>Account context</h3>
                 <button class="btn purple overlay-trigger" type="button" value="overlay-two"><object class="mr-05" data="./icons/purple-video-icon.svg" width="14" height="8"></object>ASSIST</button>
                 <div class="overlay" id="overlay-two">
-                  <iframe src="https://player.vimeo.com/video/809829380?h=8fe947ad9f" width="750" height="420" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                  <div class="video-wrapper relative">
+                    <iframe src="https://player.vimeo.com/video/820953292?h=f0457235b3" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    <div class="close-video-icon"><img src="./icons/close-icon.svg" alt=""></div>
+                  </div>
                 </div>
               </div>
               <div class="lines">
@@ -50,11 +56,11 @@
                 <div class="line short-line"></div>
               </div>
               <div class="d-flex justify-between">
-                <div class="form-group d-flex items-center w-50 pr-1 special-flex">
+                <div class="form-group d-flex items-center w-50 pr-1 special-flex justify-between">
                   <h4 class="relative mr-05">Rep Name:</h4>
                   <input type="text" name="rep-name" id="rep-name">
                 </div>
-                <div class="form-group d-flex items-center w-50 special-flex">
+                <div class="form-group d-flex items-center w-50 special-flex justify-between">
                   <h4 class="relative mr-05">Account:</h4>
                   <input type="text" name="account" id="account">
                 </div>
@@ -64,11 +70,20 @@
                 <input type="date" id="meeting-date" name="meeting-date" onfocus="this.showPicker()">
               </div>
               <div class="mt-1">
-                <div class="section-subtitle d-flex toggle-section">
-                  <span class="arrow-wrapper">
-                    <img src="./icons/purple-arrow-right.svg" alt="">
-                  </span>
-                  <h2>Reviews</h2>
+                <div class="section-subtitle d-flex justify-between toggle-section">
+                  <div class="d-flex">
+                    <span class="arrow-wrapper">
+                      <img src="./icons/purple-arrow-right.svg" alt="">
+                    </span>
+                    <h2>Call Plan Review</h2>
+                  </div>
+                  <button class="btn special-purple overlay-trigger" type="button" value="overlay-three"><object class="mr-05" data="./icons/purple-video-icon.svg" width="14" height="8"></object>ASSIST</button>
+                  <div class="overlay" id="overlay-three">
+                    <div class="video-wrapper relative">
+                      <iframe src="https://player.vimeo.com/video/820953292?h=f0457235b3" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                      <div class="close-video-icon"><img src="./icons/close-icon.svg" alt=""></div>
+                    </div>
+                  </div>
                 </div>
                 <div class="subsection-content d-flex justify-between">
                     <div class="plan-competency">
@@ -76,9 +91,12 @@
                         <h3>Plan competency</h3>
                         <div class="d-flex items-center">
                           <h4 class="private">Private</h4>
-                          <button class="btn purple overlay-trigger" type="button" value="overlay-three"><object class="mr-05" data="./icons/purple-video-icon.svg" width="14" height="8"></object>ASSIST</button>
-                          <div class="overlay" id="overlay-three">
-                            <iframe src="https://player.vimeo.com/video/809829380?h=8fe947ad9f" width="750" height="420" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                          <button class="btn purple overlay-trigger" type="button" value="overlay-four"><object class="mr-05" data="./icons/purple-video-icon.svg" width="14" height="8"></object>ASSIST</button>
+                          <div class="overlay" id="overlay-four">
+                            <div class="video-wrapper relative">
+                              <iframe src="https://player.vimeo.com/video/820953292?h=f0457235b3" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                              <div class="close-video-icon"><img src="./icons/close-icon.svg" alt=""></div>
+                            </div>
                           </div>
                         </div>
 
@@ -93,9 +111,12 @@
                       <div class="d-flex justify-between">
                         <h3>Manager Pre-Call Feedback  
                         </h3>
-                        <button class="btn purple overlay-trigger" type="button" value="overlay-four"><object class="mr-05" data="./icons/purple-video-icon.svg" width="14" height="8"></object>ASSIST</button>
-                        <div class="overlay" id="overlay-four">
-                          <iframe src="https://player.vimeo.com/video/809829380?h=8fe947ad9f" width="750" height="420" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                        <button class="btn purple overlay-trigger" type="button" value="overlay-five"><object class="mr-05" data="./icons/purple-video-icon.svg" width="14" height="8"></object>ASSIST</button>
+                        <div class="overlay" id="overlay-five">
+                          <div class="video-wrapper relative">
+                            <iframe src="https://player.vimeo.com/video/820953292?h=f0457235b3" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                            <div class="close-video-icon"><img src="./icons/close-icon.svg" alt=""></div>
+                          </div>
                         </div>
                       </div>
                       <div class="lines">
@@ -104,9 +125,7 @@
                       </div>
 
                       <div class="form-group">
-                        <div class="shared">
-                          <h4>Shared with rep</h4>
-                        </div>
+                        <h4 class="shared mb-05">Shared with rep</h4>
                         <textarea name="manager-feedback" id="manager-feedback" class="w-100" placeholder="Feedback to Rep on meeting (suggested improvements etc.)" maxlength="255"></textarea>
                       </div>
                     </div>
