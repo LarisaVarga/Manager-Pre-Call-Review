@@ -1,0 +1,201 @@
+@media print {
+  @page {
+    margin:0;
+    size: auto;
+  }
+  .pagebreak {
+    clear: both;
+    page-break-after: always;
+  }
+  .margin-top-page-two { margin-top: 1cm; height: 0; display: initial;}
+  body { margin: 1cm;}
+  body, * { font-family: 'Helvetica', 'Arial', sans-serif; }
+  h1 { font-size: 1.3rem; }
+  h2, .tabs label { font-size: 1.1rem; }
+  h3, .checkboxes-wrapper label, .page-title { font-size: 0.9rem; }
+  h4, input, textarea, select, option { font-size: 0.7rem; }
+  p { font-size: 0.6rem; }
+  .sections-wrapper { margin: 0rem; }
+  .btn, .extra-space, .info-icon, header, footer, .first-assist-wrapper { display: none; }
+  input, textarea, select, option {
+    outline: none;
+    border: none;
+    resize: none;
+    padding: 0;
+    margin: 0;
+  }
+  input, #strategic-objective { margin-left: 0.2rem;}
+
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+  }
+  .orange-section, .blue-section, .green-section {
+    border: none;
+  }
+  #date {
+    display: initial;
+  }
+
+  .orange-section h3 { color: var(--orange); }
+  .blue-section h3 { color: var(--blue); }
+  .green-section h3 { color: var(--green); }
+
+  #carrots, #sticks, #oa, #ra {
+    width: 100%;
+    height: auto;
+    padding: 0;
+  }
+  .form-group { 
+    display: block;
+  }
+
+  ::-webkit-input-placeholder { 
+    color: transparent;
+  }
+  :-moz-placeholder { 
+      color: transparent;
+  }
+  ::-moz-placeholder { 
+      color: transparent;
+  }
+  :-ms-input-placeholder { 
+      color: transparent;
+  }
+  ::-webkit-datetime-edit-year-field:not([aria-valuenow]),
+  ::-webkit-datetime-edit-month-field:not([aria-valuenow]),
+  ::-webkit-datetime-edit-day-field:not([aria-valuenow]) {
+      color: transparent;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  .orange-section .section-title {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact; 
+    background-color: var(--orange) !important;
+  }
+  .blue-section .section-title {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact; 
+    background-color: var(--blue) !important;
+  }
+  .green-section .section-title {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact; 
+    background-color: var(--green) !important;
+  }
+  .section-title {
+    justify-content: center;
+  }
+  .section-title{
+    clip-path: polygon(0% 0%, 97% 0%, 100% 50%, 97% 100%, 0% 100%);
+  }
+
+  .tabs-block { margin: 10px;}
+  .tabs [type=radio]:checked + label, .tabs label {
+    border: 2px solid var(--green);
+    border-right: 0;
+    color: var(--green);
+    padding: 0.3rem;
+    margin-right: 18px;
+  }
+  .tabs .tab-heading:after {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-top: 2px solid var(--green);
+    border-bottom: 0px solid var(--green);
+    border-left: 0px solid var(--green);
+    border-right: 2px solid var(--green);
+    top: calc(50% - 12.5px);
+    left: calc( 100% - 12.5px);
+    content: "";
+    transform: rotate(45deg);
+    background-color: transparent;
+  }
+
+.checkboxes-wrapper label { color: var(--black);}
+
+  .special-flex {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .special-flex.items-start {
+    align-items: flex-start;
+  }
+  .no-flex-on-print {
+    display: block;
+  }
+  #account, #meeting-date {
+    width: auto;
+  }
+
+  .tabs .tab {
+    display: block !important;
+  }
+
+  .container input:checked ~ .checkmark {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact; 
+    background-color: var(--green);
+  }
+
+ .form-group {
+    margin: 0!important;
+  }
+  h4.mr-05 {
+    margin: 0;
+  }
+  .arrow-wrapper {
+    display: none;
+  }
+  .pcp-section .section-content {
+    height: auto;
+    overflow: visible;
+    padding: 1rem;
+  }
+  
+  .bottom {
+    width: 100%;
+    height: 3rem;
+  }
+  .bottom br { display: none;}
+  .bottom p { margin: 0; }
+
+  .print-tab-arrow {
+    width: 1rem;
+    height: 100%;
+    position: absolute;
+    right: 0;
+  }
+   .border-line {
+    position: absolute;
+    width: 2px;
+    height: 50%;
+    transform-origin: 0% 0%;
+    background-color: var(--green);
+   }
+   .border-line.top-line {
+    top: 0;
+    transform: rotate(-35deg);
+   }
+   .border-line.bottom-line {
+    bottom: 0;
+    transform: rotate(35deg);
+   }
+   .private-notes { display: block;}
+   hr {
+    border: none;
+    border-top: 1px dotted var(--darkGrey);
+    color: #fff;
+    background-color: #fff;
+    height: 30px;
+    width: 100%;
+   }
+
+
+}
