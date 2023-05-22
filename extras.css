@@ -9,7 +9,7 @@
   --purpleWithLessOpacity: rgba(102,0,102,0.05);
   --darkGrey: #596172;
   --grey: #949FB7;
-  --lightGrey: #F6F6F6;
+  --lightGrey: #faf9f9;
   --black: #0C0C0C;
   --white: #FFFFFF;
   --darkBlue: #032D60;
@@ -52,6 +52,7 @@ body {
 .pl-05 { padding-left: 0.5rem;}
 .pr-05 { padding-right: 0.5rem;}
 .p-0 { padding: 0; }
+.p-1 { padding: 1rem; }
 
 .w-50 { width: 50%;}
 .w-100 { width: 100%;}
@@ -65,7 +66,10 @@ h4 {
   text-transform: uppercase;
   color: var(--darkGrey);
 }
-p { font-size: 0.7rem; }
+h5 {
+  font-size: 1rem;
+}
+p { font-size: 0.9rem; }
 
 input, textarea, select {
   padding: 0.75rem 0.5rem;
@@ -184,4 +188,52 @@ input:-internal-autofill-selected { background-color: var(--white);}
   right: 0;
   bottom: 100%;
   padding: 0.5rem;
+}
+.checkboxes-wrapper { position: relative;}
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  height: 20px;
+  width: 20px;
+  background-color: var(--white);
+  border: 0.5px solid var(--grey);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: var(--purple);
+  border-color: var(--purple);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2.5px 2.5px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
