@@ -135,3 +135,4 @@
 }
 .meets-form-group { padding: 1rem; }
 .meets-form-group.grey-bg { background-color: var(--lightGrey); }
+#manager-feedback { min-height: 8rem;}

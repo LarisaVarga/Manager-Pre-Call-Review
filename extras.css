@@ -189,14 +189,13 @@ input:-internal-autofill-selected { background-color: var(--white);}
   bottom: 100%;
   padding: 0.5rem;
 }
-.checkboxes-wrapper { position: relative;}
-.container input {
+/* .container input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
   height: 0;
   width: 0;
-}
+} */
 .checkmark {
   position: absolute;
   top: 50%;
@@ -208,25 +207,36 @@ input:-internal-autofill-selected { background-color: var(--white);}
   border: 0.5px solid var(--grey);
   border-radius: 3px;
   cursor: pointer;
+  pointer-events: none
+}
+input[type="radio"] {
+  position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    min-height: 0;
+}
+.meets input:checked ~ .checkmark {
+  background-color: var(--green);
+  border-color: var(--green);
+}
+.gap input:checked ~ .checkmark {
+  background-color: var(--orange);
+  border-color: var(--orange);
 }
 
-/* When the checkbox is checked, add a blue background */
-.container input:checked ~ .checkmark {
-  background-color: var(--purple);
-  border-color: var(--purple);
-}
-
-.checkmark:after {
+.meets .checkmark:after,.gap .checkmark:after, .gap .checkmark:before {
   content: "";
   position: absolute;
   display: none;
 }
-
-.container input:checked ~ .checkmark:after {
+.meets input:checked ~ .checkmark:after, .gap input:checked ~ .checkmark:after, .gap input:checked ~ .checkmark:before {
   display: block;
 }
-
-.container .checkmark:after {
+.meets .checkmark:after {
   left: 7px;
   top: 3px;
   width: 5px;
@@ -236,4 +246,25 @@ input:-internal-autofill-selected { background-color: var(--white);}
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.gap .checkmark:before {
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) rotate(45deg);
+    background-color:#ffffff;
+    width: 13px;
+    height:2px;
+    border-radius:40px;
+}
+.gap .checkmark:after {
+    content:'';
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) rotate(-45deg);
+    background-color:#ffffff;
+    width: 13px;
+    height:2px;
+    border-radius:40px;
 }
