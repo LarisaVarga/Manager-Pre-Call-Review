@@ -183,5 +183,9 @@
     top: 1rem;
     right: 1rem;
   }
-
+  .shared, .private {
+     background-color: var(--purpleWithOpacity);
+    -webkit-print-color-adjust: exact; 
+    print-color-adjust: exact;
+  }
 }
