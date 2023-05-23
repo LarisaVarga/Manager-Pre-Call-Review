@@ -37,10 +37,13 @@
 
 }
 .pcp-section.close .section-content, .close .subsection-content { display: none; }
+
 .subsection-content {
   background-color: var(--purpleWithLessOpacity);
   border: 2px solid var(--purple);
   border-top: 0;
+  display: flex;
+  justify-content: space-between;
 }
 .pcp-section.close .arrow-wrapper img, .close .arrow-wrapper img {
   transform: rotate(-90deg);
@@ -135,4 +138,4 @@
 }
 .meets-form-group { padding: 1rem; }
 .meets-form-group.grey-bg { background-color: var(--lightGrey); }
-#manager-feedback { min-height: 8rem;}
+/* #manager-feedback { min-height: 5rem;} */

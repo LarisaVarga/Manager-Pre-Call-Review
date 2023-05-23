@@ -218,6 +218,7 @@ input[type="radio"] {
     height: 15px;
     cursor: pointer;
     min-height: 0;
+    opacity: 0;
 }
 .meets input:checked ~ .checkmark {
   background-color: var(--green);
