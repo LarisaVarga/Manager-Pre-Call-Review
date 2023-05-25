@@ -15,8 +15,9 @@ function GeneratePdf() {
     console.log(element)
     if (element.value.length < 1) {
       element.classList.add("hide-on-print");
+      element.parentElement.classList.remove("special-pb");
     }
-    else {
+    if (element.value.length > 1) {
       element.classList.remove("hide-on-print");
       element.parentElement.classList.add("special-pb");
     }
