@@ -1,7 +1,4 @@
 
-
-
-
 var inputs = document.querySelectorAll(".text-field");
 // console.log(inputs)
 var inputsArr = Array.prototype.slice.call(inputs);
@@ -9,7 +6,6 @@ var inputsArr = Array.prototype.slice.call(inputs);
 // Function to GeneratePdf
 function GeneratePdf() {
   // validateForm
-
   inputsArr.forEach(validateInputs)
   function validateInputs(element) {
     console.log(element)
@@ -22,7 +18,6 @@ function GeneratePdf() {
       element.parentElement.classList.add("special-pb");
     }
   }
-
   window.print();
 }
 
@@ -33,7 +28,7 @@ for (let i = 0; i < sectionsTitles.length; i++) {
   sectionsTitles[i].addEventListener("click", toggleOpenSection, false);
 }
 function toggleOpenSection() {
-  this.parentElement.classList.toggle('close');
+  this.parentElement.parentElement.classList.toggle('close');
 }
 
 
