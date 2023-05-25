@@ -1,8 +1,31 @@
 
+
+
+
+var inputs = document.querySelectorAll(".text-field");
+// console.log(inputs)
+var inputsArr = Array.prototype.slice.call(inputs);
+
 // Function to GeneratePdf
 function GeneratePdf() {
+  // validateForm
+
+  inputsArr.forEach(validateInputs)
+  function validateInputs(element) {
+    console.log(element)
+    if (element.value.length < 1) {
+      element.classList.add("hide-on-print");
+    }
+    else {
+      element.classList.remove("hide-on-print");
+      element.parentElement.classList.add("special-pb");
+    }
+  }
+
   window.print();
 }
+
+
 
 const sectionsTitles = document.querySelectorAll('.toggle-section');
 for (let i = 0; i < sectionsTitles.length; i++) {
@@ -24,7 +47,7 @@ function OnInput() {
 
 
 const triggers = document.querySelectorAll('.overlay-trigger');
-const overlays = document.querySelectorAll('.overlay');
+const closeBtns = document.querySelectorAll('.close-video-icon');
 for (const trigger of triggers) {
   trigger.addEventListener('click', showOverlay);
 }
@@ -35,12 +58,12 @@ function showOverlay(event) {
     overlay.style.display = "flex";
   }
 }
-for (const overlay of overlays) {
-  overlay.addEventListener('click', closeOverlay);
+for (const closeBtn of closeBtns) {
+  closeBtn.addEventListener('click', closeOverlay);
 }
 function closeOverlay(event) {
-  const overlay = event.currentTarget;
-  overlay.style.display = "none";
+  const closeBtn = event.currentTarget;
+  closeBtn.parentElement.parentElement.style.display = "none";
 
   const src = overlay.childNodes[1].getAttribute('src');
   overlay.childNodes[1].src = ""; //stop audio when modal is closed

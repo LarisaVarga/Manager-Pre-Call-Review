@@ -72,12 +72,12 @@ h5 {
 p { font-size: 0.9rem; }
 
 input, textarea, select {
-  padding: 0.75rem 0.5rem;
+  padding: 0.5rem;
   border-radius: 0.5rem;
   border: 0.5px solid var(--grey);
   color: var(--darkGrey);
   font-family: "Montserrat", sans-serif;
-  min-height: 42px;
+  min-height: 35px;
 }
 input::placeholder, textarea::placeholder { opacity: 0.5; }
 textarea {
@@ -109,7 +109,6 @@ input:-webkit-autofill:active {
   bottom: 0;
   background-color: rgba(0,0,0,0.5);
   z-index: 99; 
-  cursor: pointer; 
   justify-content: center;
   align-items: center;
 }
@@ -188,6 +187,7 @@ input:-internal-autofill-selected { background-color: var(--white);}
   right: 0;
   bottom: 100%;
   padding: 0.5rem;
+  cursor: pointer;
 }
 /* .container input {
   position: absolute;
@@ -269,3 +269,4 @@ input[type="radio"] {
     height:2px;
     border-radius:40px;
 }
+

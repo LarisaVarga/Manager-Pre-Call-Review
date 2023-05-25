@@ -29,7 +29,9 @@
   font-weight: 600;
   text-transform: uppercase;
 }
-
+.subsection-wrapper {
+  margin-top: 1rem;
+}
 .section-content, .subsection-content {
   height: auto;
   display: block;
@@ -139,3 +141,9 @@
 .meets-form-group { padding: 1rem; }
 .meets-form-group.grey-bg { background-color: var(--lightGrey); }
 /* #manager-feedback { min-height: 5rem;} */
+
+.textarea-style {
+  height: 35px;
+  margin-top: 1rem;
+}
+p.criteria { font-weight: 600;}
