@@ -76,25 +76,6 @@ date.innerHTML = 'Printed on:' + today;
 
 
 
-// const radioBtns = document.querySelectorAll('.radio');
-
-// for (let i = 0; i < radioBtns.length; i++) {
-//   radioBtns[i].addEventListener("click", () => {
-//     if (radioBtns[i].checked = true) {
-//       radioBtns[i].checked = false;
-//       console.log(radioBtns[i].checked)
-//     }
-//   }, false);
-// }
-
-// for (let i = 0; i < radioBtns.length; i++) {
-//   radioBtns[i].addEventListener("click", () => {
-//     if (radioBtns[i].checked != true) {
-//       radioBtns[i].checked = true;
-//       console.log(radioBtns[i].checked)
-//     }
-//   }, false);
-// }
 document.querySelectorAll(
   'input[type=radio]').forEach((elem) => {
     elem.addEventListener('click', allowUncheck);
