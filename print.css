@@ -208,7 +208,7 @@
   .hide-on-print {
     display: none;
   }
-
+  .pcp-section.close .section-content, .close .subsection-content { display: block; }
   /* .shared {
     position: absolute;
     top: 1rem;

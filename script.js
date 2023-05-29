@@ -1,6 +1,5 @@
 
 var inputs = document.querySelectorAll(".text-field");
-// console.log(inputs)
 var inputsArr = Array.prototype.slice.call(inputs);
 
 // Function to GeneratePdf
@@ -8,7 +7,6 @@ function GeneratePdf() {
   // validateForm
   inputsArr.forEach(validateInputs)
   function validateInputs(element) {
-    console.log(element)
     if (element.value.length < 1) {
       element.classList.add("hide-on-print");
       element.parentElement.classList.remove("special-pb");
@@ -76,3 +74,18 @@ today = mm + '/' + dd + '/' + yyyy;
 
 date.innerHTML = 'Printed on:' + today;
 
+
+
+const radioBtns = document.querySelectorAll('.radio');
+// console.log(radioBtns)
+for (let i = 0; i < radioBtns.length; i++) {
+  radioBtns[i].addEventListener("click", () => {
+    if (radioBtns[i].checked = true) {
+      // console.log(radioBtns[i].checked)
+      radioBtns[i].checked = false;
+    }
+  }, false);
+
+
+
+}

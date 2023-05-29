@@ -223,6 +223,11 @@ input[type="radio"] {
     min-height: 0;
     opacity: 0;
 }
+/* .meets input ~ .checkmark, .gap input ~ .checkmark {
+  background-color: var(--white);
+  border: 0.5px solid var(--grey);
+} */
+
 .meets input:checked ~ .checkmark {
   background-color: var(--green);
   border-color: var(--green);
