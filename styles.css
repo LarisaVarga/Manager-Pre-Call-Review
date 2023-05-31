@@ -130,7 +130,7 @@
 }
 .private { margin-right: 0.5rem;}
 .shared { text-align: end; }
-
+.criteria, .meets, .gap { text-transform: initial; color: var(--black);}
 .criteria { width: calc( 100% - 6rem);}
 .meets, .gap {
   width: 3rem;
@@ -144,4 +144,3 @@
   height: 35px;
   margin-top: 1rem;
 }
-p.criteria { font-weight: 600;}

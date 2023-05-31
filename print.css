@@ -9,12 +9,12 @@
     page-break-after: always;
   }
   .page-wrapper { min-height: 0rem !important; }
-
+  .generate-wrapper { padding: 0;}
 
   #manager-feedback { 
     padding: 0rem !important;
     min-height: 0rem !important;
-    max-height: 5rem;
+    max-height: 5.5rem;
     height: auto;
   }
   .italic-on-print {font-style: italic;}
@@ -23,10 +23,11 @@
   body { margin: 1cm;}
   body, * { font-family: 'Helvetica', 'Arial', sans-serif; }
   h1 { font-size: 1.3rem; }
-  h2, .tabs label { font-size: 1.1rem; }
-  h3, .checkboxes-wrapper label, .page-title { font-size: 0.95rem; }
-  h4, h5 { font-size: 0.8rem; color: var(--black); }
-  p { font-size: 0.7rem; color: var(--black) }
+  h2, .tabs label { font-size: 1.2rem; }
+  h3, .checkboxes-wrapper label, .page-title { font-size: 1.1rem; }
+  h4 { font-size: 1rem; color: var(--black); }
+  h5 { font-size: 0.9rem; color: var(--black); font-weight: 500; }
+  p { font-size: 0.8rem; color: var(--black) }
   .sections-wrapper { margin: 0rem; }
   .btn, .extra-space, .info-icon, header, footer, .first-assist-wrapper { display: none; }
   input, textarea, select, option {
@@ -37,7 +38,7 @@
     margin: 0;
     background-color: transparent;
     min-height: 1.25rem;
-    font-size: 0.7rem; 
+    font-size: 0.8rem; 
     color: var(--black)
   }
   input, #strategic-objective { margin-left: 0.2rem;}
@@ -209,6 +210,8 @@
     display: none;
   }
   .pcp-section.close .section-content, .close .subsection-content { display: block; }
+
+  #rep-name, #account { width: calc( 100% - 5.8rem );}
   /* .shared {
     position: absolute;
     top: 1rem;
