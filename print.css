@@ -24,7 +24,7 @@
   body, * { font-family: 'Helvetica', 'Arial', sans-serif; }
   h1 { font-size: 1.3rem; }
   h2, .tabs label { font-size: 1.2rem; }
-  h3, .checkboxes-wrapper label, .page-title { font-size: 1.1rem; }
+  h3, .page-title { font-size: 1.1rem; }
   h4 { font-size: 1rem; color: var(--black); }
   h5 { font-size: 0.9rem; color: var(--black); font-weight: 500; }
   p { font-size: 0.8rem; color: var(--black) }
@@ -81,19 +81,16 @@
     clip-path: polygon(0% 0%, 98% 0%, 100% 50%, 98% 100%, 0% 100%);
     padding: 0.3rem;
   }
-.subsection-wrapper {
-  margin-top: 0.5rem;
-}
+  .subsection-wrapper {
+    margin-top: 0.5rem;
+  }
   .section-subtitle {
      print-color-adjust: exact;
     -webkit-print-color-adjust: exact; 
     background-color: var(--purpleWithOpacity);
     border: none;
-}
-.subsection-content { border: none;}
-
-.checkboxes-wrapper label { color: var(--black);}
-
+  }
+  .subsection-content { border: none;}
   .special-flex {
     display: flex;
     justify-content: flex-start;
