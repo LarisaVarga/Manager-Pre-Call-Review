@@ -1,25 +1,23 @@
 
-var inputs = document.querySelectorAll(".text-field");
-var inputsArr = Array.prototype.slice.call(inputs);
+var textFields = document.querySelectorAll(".text-field");
+var textFieldsArr = Array.prototype.slice.call(textFields);
 
 // Function to GeneratePdf
 function GeneratePdf() {
   // validateForm
-  inputsArr.forEach(validateInputs)
-  function validateInputs(element) {
-    if (element.value.length < 1) {
+  textFieldsArr.forEach(validateTextFields)
+  function validateTextFields(element) {
+    if (element.value.length <= 0) {
       element.classList.add("hide-on-print");
       element.parentElement.classList.remove("special-pb");
     }
-    if (element.value.length > 1) {
+    if (element.value.length > 0) {
       element.classList.remove("hide-on-print");
       element.parentElement.classList.add("special-pb");
     }
   }
   window.print();
 }
-
-
 
 const sectionsTitles = document.querySelectorAll('.toggle-section');
 for (let i = 0; i < sectionsTitles.length; i++) {
