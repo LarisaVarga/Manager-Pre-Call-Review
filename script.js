@@ -55,11 +55,14 @@ for (const closeBtn of closeBtns) {
 }
 function closeOverlay(event) {
   const closeBtn = event.currentTarget;
-  closeBtn.parentElement.parentElement.style.display = "none";
+  const overlaywrapper = closeBtn.parentElement.parentElement;
+  overlaywrapper.style.display = "none"
 
-  const src = overlay.childNodes[1].getAttribute('src');
-  overlay.childNodes[1].src = ""; //stop audio when modal is closed
-  overlay.childNodes[1].src = src; // bring bak the source of the video
+  const videoWrapper = closeBtn.parentElement
+  const src = videoWrapper.childNodes[1].getAttribute('src');
+
+  videoWrapper.childNodes[1].src = ""; // stop audio when modal is closed
+  videoWrapper.childNodes[1].src = src; // bring bak the source of the video
 }
 
 var today = new Date();
